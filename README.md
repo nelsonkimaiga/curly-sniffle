@@ -23,7 +23,7 @@ How to Run via PostMan:
   }`
 
 - URL: http://localhost:8080/api/books
-- Method: GET 
+- Method: POST 
 - Authorization: Choose Basic Auth
 - Username: nelson 
 - Password: password
