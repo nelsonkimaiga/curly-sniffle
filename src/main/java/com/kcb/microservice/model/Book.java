@@ -17,9 +17,11 @@ public class Book {
 	private Long id;
 	
 	@Column
+	@NotBlank(message = "Book title cannot be empty")
 	private String title;
 	
 	@Column
+	@NotBlank(message = "Author name cannot be empty")
 	private String author;
 	
 	@Column(name = "YEAR_PUBLISHED")

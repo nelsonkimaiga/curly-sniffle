@@ -2,6 +2,7 @@ package com.kcb.microservice.controller;
 
 import com.kcb.microservice.model.Book;
 import com.kcb.microservice.service.BookService;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -27,7 +28,7 @@ public class BookController {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Book> createBook(@RequestBody Book book) {
+	public ResponseEntity<Book> createBook(@Valid @RequestBody Book book) {
 		return ResponseEntity.status(HttpStatus.CREATED).body(bookService.createBook(book));
 	}
 	
@@ -42,7 +43,7 @@ public class BookController {
 	}
 	
 	@PutMapping("/{id}")
-	public ResponseEntity<Book> updateBook(@PathVariable Long id, @RequestBody Book book) {
+	public ResponseEntity<Book> updateBook(@PathVariable Long id, @Valid @RequestBody Book book) {
 		return ResponseEntity.status(HttpStatus.OK).body(bookService.updateBook(id, book));
 	}
 	
