@@ -7,11 +7,13 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Entity
 @Table
 @Data
+@AllArgsConstructor
 public class Book {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
