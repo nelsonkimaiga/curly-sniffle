@@ -11,3 +11,20 @@ Set-up Instructions
 - The back-end service can be accessed via localhost:8080/api/books
 - Swagger documentaion available when the service is up and running via : http://localhost:8080/swagger-ui/index.html#/
 - H2 Console Access when the service is up and running via: http://localhost:8080/h2-console/
+
+How to Run via PostMan:
+- Eg Create a new book entry
+- Sample payload below:
+
+`{
+  "title": "The Pragmatic Programmer",
+  "author": "Nelson Kimaiga",
+  "year": 1999
+  }`
+
+- URL: http://localhost:8080/api/books
+- Method: GET 
+- Authorization: Choose Basic Auth
+- Username: nelson 
+- Password: password
+- Send the request
